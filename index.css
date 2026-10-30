@@ -1,0 +1,83 @@
+/*general page styling*/
+* {
+    margin: 0;
+    padding: 2px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #d6f0f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/*container / form container*/
+form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 800px;
+}
+
+/*Fieldset styling*/
+fieldset {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/*Legend styling*/
+legend {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: rgb(2, 6, 6);
+    padding: 0 10px;
+}
+
+/*label & input alignment*/
+label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-right: 10px;
+    color: #555;
+}
+
+/*Personal Info input fields*/
+fieldset :nth-of-type {
+display: flex;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    align-items: center;
+}
+
+/*Input fields styling*/
+input[type="text"],
+input[type="email"],
+input[type="tel"]
+select,textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.95rem;
+    transition: all 0.3s ease-in-out;
+    outline: none;
+    background-color: #fff;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+select:focus,
+textarea:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
+}

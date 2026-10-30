@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form and Inputs</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="submit.html" method="get" target="_blank" autocomplete="on">
+        <fieldset>
+            <legend>Personal Information</legend>
+            <label for="name">Name</label>
+            <input type="text" id="name" required placeholder="Enter your name">
+
+            <label for="email"> Email</label>
+            <input type="email" id="email" required placeholder="abd@email.com">
+
+            <label for="tel">Tel</label>
+            <input type="tel" id="tel" required placeholder="+91 1234567890">
+            
+        </fieldset>
+
+        <fieldset>
+            <legend>Hobbies</legend>
+            <label for="Reading">Reading</label>
+            <input type="checkbox" id="Reading" name="reading">
+
+            <label for="Travelling">Travelling</label>
+            <input type="checkbox" id="Travelling" name="travelling">
+
+            <label for="Gaming">Gaming</label>
+            <input type="checkbox" id="Gaming" name="gaming">
+            
+            <label for="Football">Football</label>
+            <input type="checkbox" id="Football" name="football">
+        </fieldset>
+
+        <fieldset>
+            <legend>Profession</legend>
+            <p>Pls choose only one profession</p>
+
+            <label for="Full Stack Developer">Full Stack Developer</label>
+            <input type="radio" id="Full Stack Developer" name="profession">
+
+            <label for="Front End Developer">Front End Developer</label>
+            <input type="radio" id="Front End Developer" name="profession">
+
+            <label for="Back End Developer">Back End Developer</label>
+            <input type="radio" id="Back End Developer" name="profession">
+
+            <label for="Mobile Developer">Mobile Developer</label>
+            <input type="radio" id="Mobile Developer" name="profession">
+        </fieldset>
+
+        <fieldset>
+            <legend>Preferences</legend>
+            <label for="Country">Country</label>
+            <select name="country" id="country">
+                <optgroup label="Asia">
+                    <option value="India">India</option>
+                    <option value="China">China</option>
+                </optgroup>
+
+                <optgroup label="Europe">
+                    <option value="Germany">Germany</option>
+                    <option value="France">France</option>
+                </optgroup>
+
+                <optgroup label="America">
+                    <option value="USA">USA</option>
+                    <option value="Canada">Canada</option>
+                </optgroup>
+
+                <optgroup label="Africa">
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="South Africa">South Africa</option>
+                </optgroup>
+            </select>
+        </fieldset>
+
+        <fieldset>
+            <legend>Bio</legend>
+            <label for="bio">Bio</label>
+            <textarea name="bio" id="bio" cols="50" rows="5" placeholder="Write something about yourself..." style="resize: none;"></textarea>
+        </fieldset>
+
+        <button type="submit">Submit</button>
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
