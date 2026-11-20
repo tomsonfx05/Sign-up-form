@@ -23,6 +23,10 @@ form {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     width: 100%;
     max-width: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    box-sizing: border-box;
 }
 
 /*Fieldset styling*/
@@ -32,6 +36,9 @@ fieldset {
     margin-bottom: 25px;
     border-radius: 8px;
     background-color: #f9f9f9;
+    width: 100%;
+    box-sizing: border-box;
+    min-width: 0;
 }
 
 /*Legend styling*/
@@ -48,29 +55,56 @@ label {
     font-weight: 500;
     margin-right: 10px;
     color: #555;
+    display: block;
+    margin-bottom: 8px;
 }
 
-/*Personal Info input fields*/
-fieldset :nth-of-type {
-display: flex;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 15px;
+/* Hobbies and Profession options */
+.choice {
+    display: flex;
     align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* checkbox and radio button styling */
+.choice input[type="checkbox"],
+.choice input[type="radio"] {
+    margin: 0;
+    cursor: pointer;
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
+}
+
+/* space below profession instructions */
+.profession-text {
+    margin-bottom: 20px;
+    display: block;
+    font-size: 1rem;
+    margin-top: 15px;
+}
+
+.profession-text + .choice {
+    margin-top: 10px;
 }
 
 /*Input fields styling*/
 input[type="text"],
 input[type="email"],
-input[type="tel"]
+input[type="tel"],
 select,textarea {
     width: 100%;
-    padding: 10px;
+    padding: 15px;
     border: 1px solid #ccc;
     border-radius: 6px;
     font-size: 0.95rem;
     transition: all 0.3s ease-in-out;
     outline: none;
     background-color: #fff;
+    margin-bottom: 20px;
+    box-sizing: border-box;
 }
 
 input[type="text"]:focus,
@@ -81,3 +115,48 @@ textarea:focus {
     border-color: #007bff;
     box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.15);
 }
+
+/* Bio textarea styling */
+textarea {
+    resize: vertical;
+    width: 100%;
+    max-width: 100%;
+    min-height: 150px;
+    min-width: 0;
+    display: block;
+    box-sizing: border-box;
+}
+
+/* Remove textarea resizing */
+textarea {
+    resize: none;
+    height: 180px;
+    width: 100%;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+/* Button styling */
+.button-container {
+    display: flex;
+    margin-top: 20px;
+    gap: 30px;
+}
+
+button {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+}
+
+button[type="reset"] {
+    background-color: #dc3545;
+    color: #fff;
+}
+

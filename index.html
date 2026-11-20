@@ -7,50 +7,61 @@
     <link rel="stylesheet" href="index.css">
 </head>
 <body>
-    <form action="submit.html" method="get" target="_blank" autocomplete="on">
+    <form action="submit.html" method="get" autocomplete="on">
         <fieldset>
             <legend>Personal Information</legend>
             <label for="name">Name</label>
-            <input type="text" id="name" required placeholder="Enter your name">
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
 
             <label for="email"> Email</label>
-            <input type="email" id="email" required placeholder="abd@email.com">
+            <input type="email" id="email" name="email" required placeholder="abd@email.com">
 
             <label for="tel">Tel</label>
-            <input type="tel" id="tel" required placeholder="+91 1234567890">
+            <input type="tel" id="tel" name="tel" required placeholder="+91 1234567890">
             
         </fieldset>
 
         <fieldset>
             <legend>Hobbies</legend>
-            <label for="Reading">Reading</label>
-            <input type="checkbox" id="Reading" name="reading">
 
-            <label for="Travelling">Travelling</label>
-            <input type="checkbox" id="Travelling" name="travelling">
-
-            <label for="Gaming">Gaming</label>
-            <input type="checkbox" id="Gaming" name="gaming">
-            
-            <label for="Football">Football</label>
-            <input type="checkbox" id="Football" name="football">
+            <label class="choice">
+                <input type="checkbox" name="hobbies" value="reading">
+                Reading
+            </label>
+            <label class="choice">
+                <input type="checkbox" name="hobbies" value="traveling">
+                Traveling
+            </label>
+            <label class="choice">
+                <input type="checkbox" name="hobbies" value="gaming">
+                Gaming
+            </label>
+            <label class="choice">
+                <input type="checkbox" name="hobbies" value="football">
+                Football
+            </label>
         </fieldset>
 
         <fieldset>
             <legend>Profession</legend>
-            <p>Pls choose only one profession</p>
+            <p class="profession-text">Please choose only one profession</p>
 
-            <label for="Full Stack Developer">Full Stack Developer</label>
-            <input type="radio" id="Full Stack Developer" name="profession">
-
-            <label for="Front End Developer">Front End Developer</label>
-            <input type="radio" id="Front End Developer" name="profession">
-
-            <label for="Back End Developer">Back End Developer</label>
-            <input type="radio" id="Back End Developer" name="profession">
-
-            <label for="Mobile Developer">Mobile Developer</label>
-            <input type="radio" id="Mobile Developer" name="profession">
+            <label class="choice">
+                <input type="radio" name="profession" value="mobile">
+                Mobile Developer
+            </label>
+            <label class="choice">
+                <input type="radio" name="profession" value="backend">
+                Back End Developer
+            </label>
+            <label class="choice">
+                <input type="radio" name="profession" value="frontend">
+                Front End Developer
+            </label>
+            <label class="choice">
+                <input type="radio" name="profession" value="fullstack">
+                Full Stack Developer
+            </label>
         </fieldset>
 
         <fieldset>
@@ -82,11 +93,13 @@
         <fieldset>
             <legend>Bio</legend>
             <label for="bio">Bio</label>
-            <textarea name="bio" id="bio" cols="50" rows="5" placeholder="Write something about yourself..." style="resize: none;"></textarea>
+            <textarea name="bio" id="bio" rows="5" placeholder="Write something about yourself..."></textarea>
         </fieldset>
 
-        <button type="submit">Submit</button>
-        <button type="reset">Reset</button>
+        <div class="button-container">
+            <button type="submit">Submit</button>
+            <button type="reset">Reset</button>
+        </div>
     </form>
 
 </body>
